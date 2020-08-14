@@ -13,7 +13,7 @@ public class Exercise11 {
 			System.out.println("-------------------------------------------");
 			System.out.println("1. 학생 수| 2. 점수입력 | 3.점수리스트 | 4.분석 | 5.종료");
 			System.out.println("-------------------------------------------");
-			System.out.println("선택>");	
+			System.out.println("선택>");	 
 			int selectNo = sc.nextInt();
 			
 			
@@ -36,11 +36,14 @@ public class Exercise11 {
 				double avg = 0;
 				for(int i = 0; i<scores.length; i++) {
 					max = (max<scores[i])?scores[i]:max;
+//					if(max<scores[i])
+//					max = scores[i];
 					sum += scores[i];
 				}
 				avg = (double) sum / studentNum;
 				System.out.println("최고 점수:" + max );
-				System.out.println("평균 점수:" + avg);
+				System.out.printf("평균 %.2f", avg);
+				System.out.println();
 			}else if(selectNo == 5){
 				run = false;
 			}
