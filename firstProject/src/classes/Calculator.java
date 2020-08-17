@@ -1,29 +1,29 @@
 package classes;
 
 public class Calculator {
-	double pi = 3.14;
+	private static double pi = 3.14; //static 이 없으면 new 인스턴스를 만들어야함
 	
 	// 가로, 세로 => 넓이를 반환해주는 메소드 (getReactagle)
 	
-	public int add(int x, int y) {
+	public static int add(int x, int y) { // 필드는 private 로 숨기고 메소드는 public로 공개함
 		int sum = 0;
 		sum = x + y;
 		return sum;
 	}
-	public double add(double x, double y) {
+	public static double add(double x, double y) {
 		return x + y;
 	}
 	
-	public void getArea(double a) {
+	public static void getArea(double a) {
 		double result = pi * a * a;
 		System.out.println("반지름 " + a + "넓이는 " +  result);
 	}
-	public void getRactagle(double c, double d) {
+	public static void getRactagle(double c, double d) {
 		double result = c * d;
 		System.out.println("가로" +  c + ","+ "세로" +  d +"의 넓이는 " +  result);
 	}
 	
-	public double mul(double a, double b) {
+	public static double mul(double a, double b) {
 		return (a * b);
 	}
 	
